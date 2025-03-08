@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.road {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.road-img {
+    position: absolute;
+    width: 200%;
+    height: 100vh;
+    animation: moveRoad 3s linear infinite;
+}
+
+.car {
+    position: absolute;
+    width: 200px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left 0.1s ease-out, transform 0.1s ease-out;
+}
+
+@keyframes moveRoad {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
